@@ -20,6 +20,11 @@
         "encoder": true,
         "nkro": true
     },
+    "eeprom": {
+        "wear_leveling": {
+            "backing_size": 2112
+        }
+    },
     "encoder": {
         "rotary": [
           { "pin_a": "D3", "pin_b": "D4", "resolution": 2 }

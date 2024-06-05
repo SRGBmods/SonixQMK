@@ -28,6 +28,11 @@
         "pid": "0x5041",
         "device_version": "1.0.0"
     },
+    "eeprom": {
+        "wear_leveling": {
+            "backing_size": 2112
+        }
+    },
     "layouts": {
         "LAYOUT_fullsize_iso": {
             "layout": [

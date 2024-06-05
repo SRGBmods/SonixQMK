@@ -874,6 +874,11 @@ ifneq ($(findstring SN32F248F, $(MCU)),)
 
   USE_FPU ?= no
 
+  # Stack sizes: Since this chip has limited RAM capacity, the stack area needs to be reduced.
+  # This ensures that the EEPROM page buffer fits into RAM
+  USE_PROCESS_STACKSIZE ?= 0x600
+  USE_EXCEPTIONS_STACKSIZE ?= 0x300
+
   # Bootloader address for SN32 DFU
   SN32_BOOTLOADER_ADDRESS = 0x1FFF0301
 endif
@@ -906,6 +911,11 @@ ifneq ($(findstring SN32F248BF, $(MCU)),)
 
   USE_FPU ?= no
 
+  # Stack sizes: Since this chip has limited RAM capacity, the stack area needs to be reduced.
+  # This ensures that the EEPROM page buffer fits into RAM
+  USE_PROCESS_STACKSIZE ?= 0x600
+  USE_EXCEPTIONS_STACKSIZE ?= 0x300
+
   # Bootloader address for SN32 DFU
   SN32_BOOTLOADER_ADDRESS = 0x1FFF0301
 endif
@@ -937,6 +947,11 @@ ifneq ($(findstring SN32F268F, $(MCU)),)
   BOARD ?= SN_SN32F260
 
   USE_FPU ?= no
+
+  # Stack sizes: Since this chip has limited RAM capacity, the stack area needs to be reduced.
+  # This ensures that the EEPROM page buffer fits into RAM
+  USE_PROCESS_STACKSIZE ?= 0x600
+  USE_EXCEPTIONS_STACKSIZE ?= 0x300
 
   # Bootloader address for SN32 DFU
   SN32_BOOTLOADER_ADDRESS = 0x1FFF0009

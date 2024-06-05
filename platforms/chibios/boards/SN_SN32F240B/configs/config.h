@@ -13,7 +13,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 #pragma once
-#define WEAR_LEVELING_SN32_EMULATION_PAGE_COUNT 36
-#define DYNAMIC_KEYMAP_LAYER_COUNT 4
+
+#    ifndef WEAR_LEVELING_EFL_OMIT_LAST_SECTOR_COUNT
+#        define WEAR_LEVELING_EFL_OMIT_LAST_SECTOR_COUNT 1
+#    endif
