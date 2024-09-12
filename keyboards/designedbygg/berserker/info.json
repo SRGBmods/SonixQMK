@@ -1,11 +1,11 @@
 {
     "keyboard_name": "Berserker",
-    "manufacturer": "GG",
+    "manufacturer": "DesignedbyGG",
     "url": "https://designedby.gg/product/berserker/",
     "processor": "SN32F248BF",
     "maintainer": "dexter93",
     "bootloader": "sn32-dfu",
-    "debounce": 10,
+    "debounce": 20,
     "build": {
         "debounce_type": "sym_eager_pk",
     },
@@ -165,7 +165,7 @@
             "jellybean_raindrops" : true,
             "multisplash" : true,
             "pixel_flow" : true,
-            "pixel_fractal" : true,
+            "pixel_fractal" : false,
             "pixel_rain" : true,
             "rainbow_beacon" : true,
             "rainbow_moving_chevron" : true,

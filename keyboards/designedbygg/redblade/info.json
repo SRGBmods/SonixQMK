@@ -5,7 +5,7 @@
     "processor": "SN32F248BF",
     "maintainer": "dexter93",
     "bootloader": "sn32-dfu",
-    "debounce": 10,
+    "debounce": 20,
     "build": {
         "debounce_type": "sym_eager_pk",
     },
@@ -17,18 +17,13 @@
         "console": false,
         "extrakey": true,
         "mousekey": false,
-        "encoder": true,
+        "encoder": false,
         "nkro": true
     },
     "eeprom": {
         "wear_leveling": {
             "backing_size": 2112
         }
-    },
-    "encoder": {
-        "rotary": [
-          { "pin_a": "D3", "pin_b": "D4", "resolution": 2 }
-        ]
     },
     "indicators": {
         "num_lock": "B13",
@@ -192,7 +187,7 @@
             "jellybean_raindrops" : true,
             "multisplash" : true,
             "pixel_flow" : true,
-            "pixel_fractal" : true,
+            "pixel_fractal" : false,
             "pixel_rain" : true,
             "rainbow_beacon" : true,
             "rainbow_moving_chevron" : true,

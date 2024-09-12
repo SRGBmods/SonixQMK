@@ -1,4 +1,4 @@
-/* Copyright 2023 Dimitris Mantzouranis <d3xter93@gmail.com>
+/* Copyright 2024 Dimitris Mantzouranis <d3xter93@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
