@@ -1,7 +1,7 @@
 {
     "manufacturer": "HATOR",
     "keyboard_name": "HATOR Gravity TKL",
-    "url": "https://hator.gg",
+    "url": "https://hator.com",
     "maintainer": "AlexHtr",
     "bootloader": "sn32-dfu",
     "usb": {
@@ -43,16 +43,12 @@
             "cycle_out_in_dual": true,
             "cycle_pinwheel": true,
             "cycle_spiral": true,
-            "dual_beacon": true,
             "rainbow_beacon": true,
-            "jellybean_raindrops": true,
             "pixel_rain": true,
             "typing_heatmap": true,
-            "solid_reactive_multiwide": true,
-            "solid_reactive_multinexus": true,
+            "reactive_simple": true,
             "splash": true,
-            "solid_splash": true,
-            "riverflow": true
+            "solid_splash": true
         },
         "driver": "sn32f2xx",
         "layout": [
