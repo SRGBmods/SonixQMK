@@ -13,9 +13,9 @@ Make example for this keyboard (after setting up your build environment):
     make keychron/c1/rgb:default
 Flashing example for this keyboard:
 1. If your keyboard currently has stock firmware installed, put your keyboard first into bootloader by shorting the boot pins found under the spacebar before plugging in your keyboard to the PC. Otherwise, press `Fn + Esc` to put your keyboard into bootloader.
-1. Download and run [Sonix Flasher](https://github.com/SonixQMK/sonix-flasher/releases).
-1. In Sonix Flasher, select `SN32F24X` under 'Device'. And select `0x00` as the qmk offset.
-1. Lastly, click 'Flash QMK...' and find the compiled firmware.
+2. Download and run [Sonix Flasher](https://github.com/SonixQMK/sonix-flasher/releases).
+3. In Sonix Flasher, select `SN32F24X` under 'Device'. And select `0x00` as the qmk offset.
+4. Lastly, click 'Flash QMK...' and find the compiled firmware.
 
 * * *
 # Firmware Details

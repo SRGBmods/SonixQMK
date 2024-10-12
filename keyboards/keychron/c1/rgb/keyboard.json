@@ -14,9 +14,7 @@
         "rgb_matrix": true,
         "dip_switch": true
     },
-    "bootmagic": {
-        "matrix": [0, 0]
-    },
+    "bootloader_instructions": "Hold FN + ESC",
     "indicators": {
         "caps_lock": "B10"
     },
@@ -27,7 +25,6 @@
         "cols": ["A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8"],
         "rows": ["C15", "D11", "D10", "D9", "D8", "D7"]
     },
-    "debounce": 0,
     "processor": "SN32F248BF",
     "url": "https://www.keychron.com/products/keychron-c1-wired-mechanical-keyboard?variant=32321247182937",
     "usb": {
