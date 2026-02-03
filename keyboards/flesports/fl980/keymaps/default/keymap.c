@@ -31,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             KC_LCTL,    KC_LGUI,    KC_LALT,                                 KC_SPC,                                       KC_RALT,    MO(1),      KC_RCTL,    KC_UP,      KC_LEFT,   KC_DOWN,   KC_RIGHT,   KC_P0
         ),
     [1] = LAYOUT_default(   QK_BOOT,    KC_BRID,    KC_BRIU,    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MUTE,    KC_VOLD,    KC_VOLU,                KC_TRNS,    KC_TRNS,    KC_HOME,    KC_END,
-                            QK_RBT,     KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    RGB_SPD,    RGB_SPI,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    EE_CLR,
+                            QK_RBT,     KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    RM_SPDD,    RM_SPDU,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    EE_CLR,
                             KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,    KC_PSCR,    KC_SCRL,    KC_PAUS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
                             KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,                KC_TRNS,    RGB_M_SW,   KC_TRNS,    KC_TRNS,    KC_TRNS,
                             KC_TRNS,                KC_TRNS,    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,                KC_TRNS,    RGB_M_P,    RGB_M_B,    RGB_M_R,    KC_TRNS,
-                            KC_TRNS,    KC_TRNS,    KC_TRNS,                                  RGB_TOG,                                     RGB_RMOD,   KC_TRNS,    RGB_MOD,    RGB_VAI,    RGB_HUD,    RGB_VAD,    RGB_HUI,    KC_TRNS
+                            KC_TRNS,    KC_TRNS,    KC_TRNS,                                  RM_TOGG,                                     RM_PREV,   KC_TRNS,    RM_NEXT,    RM_VALU,    RM_HUED,    RM_VALD,    RM_HUEU,    KC_TRNS
              ),
 };
 

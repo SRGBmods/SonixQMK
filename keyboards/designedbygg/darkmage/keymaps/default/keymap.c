@@ -41,15 +41,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_PAUS,
         KC_MPRV, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_INS,
         KC_MPLY, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME,
-        KC_MNXT, _______, _______, _______, _______, _______, QK_BOOT, _______, KC_MUTE, _______, _______, _______, _______, RGB_MOD, KC_END,
-        _______, _______, _______,                            _______,                   _______, _______, _______, RGB_SAI, RGB_HUI, RGB_SPI
+        KC_MNXT, _______, _______, _______, _______, _______, QK_BOOT, _______, KC_MUTE, _______, _______, _______, _______, RM_NEXT, KC_END,
+        _______, _______, _______,                            _______,                   _______, _______, _______, RM_SATU, RM_HUEU, RM_SPDU
     )
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][1][2] = {
     [0] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [1]   = {ENCODER_CCW_CW(RGB_VAD, RGB_VAI) },
+    [1]   = {ENCODER_CCW_CW(RM_VALD, RM_VALU) },
 };
 #endif
 

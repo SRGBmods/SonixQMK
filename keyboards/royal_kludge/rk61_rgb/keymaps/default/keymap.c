@@ -79,10 +79,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
      */
     [WINFN] = LAYOUT_60_ansi(
-        KC_GRV,     KC_BRIU,    KC_BRID,    KC_TASK,    KC_FLXP,    RGB_VAD,    RGB_VAI,    KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,
-        _______,    _______,    _______,    _______,    _______,    _______,    KC_PSCR,    KC_SCRL,    KC_PAUS,    _______,    _______,    RGB_VAD,    RGB_VAI,    RGB_MOD,   
-        _______,    _______,    KC_MAC,     _______,    _______,    _______,    KC_INS,     KC_HOME,    KC_PGUP,    _______,    RGB_SPD,    RGB_SPI,                _______,   
-        _______,                _______,    _______,    _______,    _______,    _______,    KC_DEL,     KC_END,     KC_PGDN,    RGB_HUI,    KC_UP,      MO(FNS),   
+        KC_GRV,     KC_BRIU,    KC_BRID,    KC_TASK,    KC_FLXP,    RM_VALD,    RM_VALU,    KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,
+        _______,    _______,    _______,    _______,    _______,    _______,    KC_PSCR,    KC_SCRL,    KC_PAUS,    _______,    _______,    RM_VALD,    RM_VALU,    RM_NEXT,   
+        _______,    _______,    KC_MAC,     _______,    _______,    _______,    KC_INS,     KC_HOME,    KC_PGUP,    _______,    RM_SPDD,    RM_SPDU,                _______,   
+        _______,                _______,    _______,    _______,    _______,    _______,    KC_DEL,     KC_END,     KC_PGDN,    RM_HUEU,    KC_UP,      MO(FNS),   
         QK_BOOT,    _______,    _______,                                        _______,                                        KC_LEFT,    KC_DOWN,    KC_RIGHT,   _______
     ),
     /* Mac Base
@@ -119,10 +119,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
      */
     [MACFN] = LAYOUT_60_ansi(
-        KC_GRV,     KC_BRIU,    KC_BRID,    KC_MCTL,    KC_LPAD,    RGB_VAD,    RGB_VAI,    KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,
-        _______,    _______,    _______,    _______,    _______,    _______,    KC_PSCR,    KC_SCRL,    KC_PAUS,    _______,    _______,    RGB_VAD,    RGB_VAI,    RGB_MOD,   
-        _______,    KC_WIN,     _______,    _______,    _______,    _______,    KC_INS,     KC_HOME,    KC_PGUP,    _______,    RGB_SPD,    RGB_SPI,                _______,   
-        _______,                KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_MPRV,    KC_MNXT,    KC_DEL,     KC_END,     KC_PGDN,    RGB_HUI,    KC_UP,      MO(FNS),   
+        KC_GRV,     KC_BRIU,    KC_BRID,    KC_MCTL,    KC_LPAD,    RM_VALD,    RM_VALU,    KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,
+        _______,    _______,    _______,    _______,    _______,    _______,    KC_PSCR,    KC_SCRL,    KC_PAUS,    _______,    _______,    RM_VALD,    RM_VALU,    RM_NEXT,   
+        _______,    KC_WIN,     _______,    _______,    _______,    _______,    KC_INS,     KC_HOME,    KC_PGUP,    _______,    RM_SPDD,    RM_SPDU,                _______,   
+        _______,                KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_MPRV,    KC_MNXT,    KC_DEL,     KC_END,     KC_PGDN,    RM_HUEU,    KC_UP,      MO(FNS),   
         QK_BOOT,    _______,    _______,                                        _______,                                        KC_LEFT,    KC_DOWN,    KC_RIGHT,   _______
     ),
     /* Mac FN + Right Shift

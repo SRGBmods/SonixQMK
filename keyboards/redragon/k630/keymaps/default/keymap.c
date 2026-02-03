@@ -31,9 +31,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [L1] = LAYOUT_60_ansi( 
         KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  QK_BOOT,
-        _______, KC_VOLD, KC_UP,   KC_VOLU, RGB_HUD, RGB_HUI, RGB_SPD, RGB_SPI, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,  KC_DEL,  KC_PAUS,
-        _______, KC_LEFT, KC_DOWN, KC_RGHT, RGB_SAD, RGB_SAI, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_HOME, KC_END,           _______,
-        _______,          RGB_MOD, RGB_TOG, KC_MUTE, RGB_VAD, RGB_VAI, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN,          _______,
+        _______, KC_VOLD, KC_UP,   KC_VOLU, RM_HUED, RM_HUEU, RM_SPDD, RM_SPDU, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,  KC_DEL,  KC_PAUS,
+        _______, KC_LEFT, KC_DOWN, KC_RGHT, RM_SATD, RM_SATU, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_HOME, KC_END,           _______,
+        _______,          RM_NEXT, RM_TOGG, KC_MUTE, RM_VALD, RM_VALU, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN,          _______,
         _______, _______, KC_MPRV,                             KC_MPLY,                            KC_MNXT, _______, _______, _______
     )
 };

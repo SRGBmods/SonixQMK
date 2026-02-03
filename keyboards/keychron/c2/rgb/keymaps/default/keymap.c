@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [WIN_BASE] = LAYOUT_ansi( // Windows Base layout
         /*  0         1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16       17       18       19       20      */
-		KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,             KC_PSCR,  KC_CRTN,  RGB_TOG,
+		KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,             KC_PSCR,  KC_CRTN,  RM_TOGG,
 		KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,  KC_INS,   KC_HOME,  KC_PGUP,  KC_NUM,   KC_PSLS, KC_PAST, KC_PMNS,
 		KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,  KC_BSLS,  KC_DEL,   KC_END,   KC_PGDN,  KC_P7,    KC_P8,   KC_P9,   KC_PPLS,
 		KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,            KC_ENT,                                 KC_P4,    KC_P5,   KC_P6,
@@ -60,12 +60,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [WIN_FN] = LAYOUT_ansi( // Windows FN Overlay
         /*  0         1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16       17        18        19        20      */
-		QK_BOOT,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  			KC_SNIP,  _______,  RGB_MOD,
-		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_HUI,  RGB_VAI,  RGB_SAI,  RGB_M_TW, _______,  _______,  _______,
-		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_HUD,  RGB_VAD,  RGB_SAD,  RGB_M_X,  RGB_M_G,  RGB_M_T,  _______,
+		QK_BOOT,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  			KC_SNIP,  _______,  RM_NEXT,
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RM_HUEU,  RM_VALU,  RM_SATU,  RGB_M_TW, _______,  _______,  _______,
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RM_HUED,  RM_VALD,  RM_SATD,  RGB_M_X,  RGB_M_G,  RGB_M_T,  _______,
 		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,			  _______,								  RGB_M_SW, RGB_M_SN, RGB_M_K,
-		_______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,			  _______,			  RGB_SPI,			  RGB_M_P,  RGB_M_B,  RGB_M_R,  _______,
-		_______,  _______,  _______,                                _______,                      _______,  _______,  _______,            _______,  RGB_RMOD, RGB_SPD,  RGB_MOD,		    _______,  _______ ),
+		_______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,			  _______,			  RM_SPDU,			  RGB_M_P,  RGB_M_B,  RGB_M_R,  _______,
+		_______,  _______,  _______,                                _______,                      _______,  _______,  _______,            _______,  RM_PREV, RM_SPDD,  RM_NEXT,		    _______,  _______ ),
 
 
 
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MAC_BASE] = LAYOUT_ansi( // Mac Base layout
         /*  0         1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16       17       18       19       20      */
-		KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,             KC_MSCR,  KC_SIRI,  RGB_TOG,
+		KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,             KC_MSCR,  KC_SIRI,  RM_TOGG,
 		KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,  KC_INS,   KC_HOME,  KC_PGUP,  KC_NUM,   KC_PSLS, KC_PAST, KC_PMNS,
 		KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,  KC_BSLS,  KC_DEL,   KC_END,   KC_PGDN,  KC_P7,    KC_P8,   KC_P9,   KC_PPLS,
 		KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,            KC_ENT,                                 KC_P4,    KC_P5,   KC_P6,
@@ -96,12 +96,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MAC_FN] = LAYOUT_ansi( // Mac FN Overlay
         /*  0         1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16       17        18        19        20      */
-		QK_BOOT,  KC_BRID,  KC_BRIU,  KC_MSSN,  KC_FIND,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  			KC_MSNP,  _______,  RGB_MOD,
-		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_HUI,  RGB_VAI,  RGB_SAI,  RGB_M_TW, _______,  _______,  _______,
-		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_HUD,  RGB_VAD,  RGB_SAD,  RGB_M_X,  RGB_M_G,  RGB_M_T,  _______,
+		QK_BOOT,  KC_BRID,  KC_BRIU,  KC_MSSN,  KC_FIND,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  			KC_MSNP,  _______,  RM_NEXT,
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RM_HUEU,  RM_VALU,  RM_SATU,  RGB_M_TW, _______,  _______,  _______,
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RM_HUED,  RM_VALD,  RM_SATD,  RGB_M_X,  RGB_M_G,  RGB_M_T,  _______,
 		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,			  _______,								  RGB_M_SW, RGB_M_SN, RGB_M_K,
-		_______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,			  _______,			  RGB_SPI,			  RGB_M_P,  RGB_M_B,  RGB_M_R,  _______,
-		_______,  _______,  _______,                                _______,                      _______,  _______,  _______,            _______,  RGB_RMOD, RGB_SPD,  RGB_MOD,		    _______,  _______ ),
+		_______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,			  _______,			  RM_SPDU,			  RGB_M_P,  RGB_M_B,  RGB_M_R,  _______,
+		_______,  _______,  _______,                                _______,                      _______,  _______,  _______,            _______,  RM_PREV, RM_SPDD,  RM_NEXT,		    _______,  _______ ),
 };
 
 /* Mac/Windows - Toggle Switch parameters */

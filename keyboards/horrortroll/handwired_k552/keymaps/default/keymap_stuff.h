@@ -45,8 +45,8 @@ typedef struct {
 } CUSTOM_PRESETS;
 
 enum user_rgb_mode {
-    RGB_MODE_ALL,
-    RGB_MODE_NONE,
+    RM_NEXTE_ALL,
+    RM_NEXTE_NONE,
 };
 
 typedef union {
@@ -83,11 +83,11 @@ enum layer_keycodes {
 void keyboard_post_init_user(void) {
     user_config.raw = eeconfig_read_user();
     switch (user_config.rgb_mode) {
-        case RGB_MODE_ALL:
+        case RM_NEXTE_ALL:
             rgb_matrix_set_flags(LED_FLAG_ALL);
             rgb_matrix_enable_noeeprom();
             break;
-        case RGB_MODE_NONE:
+        case RM_NEXTE_NONE:
             rgb_matrix_set_flags(LED_FLAG_NONE);
             rgb_matrix_set_color_all(0, 0, 0);
             break;
@@ -235,13 +235,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     case LED_FLAG_ALL: {
                         rgb_matrix_set_flags(LED_FLAG_NONE);
                         rgb_matrix_set_color_all(0, 0, 0);
-                        user_config.rgb_mode = RGB_MODE_NONE;
+                        user_config.rgb_mode = RM_NEXTE_NONE;
                     }
                     break;
                     default: {
                         rgb_matrix_set_flags(LED_FLAG_ALL);
                         rgb_matrix_enable_noeeprom();
-                        user_config.rgb_mode = RGB_MODE_ALL;
+                        user_config.rgb_mode = RM_NEXTE_ALL;
                     }
                     break;
                 }
