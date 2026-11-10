@@ -217,8 +217,8 @@ To generate this bootloader, use the `bootloader` target, eg. `make planck/rev4:
 
 Compatible flashers:
 
-* TBD
-  * Currently, you need to either use the [Python script](https://github.com/qmk/lufa/tree/master/Bootloaders/HID/HostLoaderApp_python), or compile [`hid_bootloader_cli`](https://github.com/qmk/lufa/tree/master/Bootloaders/HID/HostLoaderApp), from the LUFA repo. Homebrew may (will) have support for this directly (via `brew install qmk/qmk/hid_bootloader_cli`).
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) (recommended GUI)
+* [hid_bootloader_cli](https://github.com/qmk/lufa/tree/master/Bootloaders/HID/HostLoaderApp) / `:qmk-hid` target in QMK (recommended command line)
 
 Flashing sequence:
 
@@ -516,16 +516,16 @@ Compatible flashers:
 * [sonixflasher](https://github.com/SonixQMK/SonixFlasherC/releases) / `:flash` target in QMK (recommended command line)
 * [sonix-flasher](https://github.com/SonixQMK/sonix-flasher/releases) (old GUI - known to cause issues)
   ```
-  sonixflasher --vidpid 0c45:7040 -f <filename>
+  sonixflasher -v 0c45:7040 -f <filename>
   ```
 <sup>1</sup>: 260 series of chips have part of the SN32-DFU bootloader in userspace and therefore must be guarded to avoid bricking. Install the [sonix-bootloader](https://github.com/SonixQMK/sonix-keyboard-bootloader) before flashing the firmware
 ```
-sonixflasher --vidpid 0c45:7010 -j -f <bootloader_filename>
+sonixflasher -v 0c45:7010 -j -f <bootloader_filename>
 
 ```
 as a one-shot operation, then flash the firmware with an offset `0x200`
 ```
-sonixflasher --vidpid 0c45:7010 -o 0x200 -f <filename>
+sonixflasher -v 0c45:7010 -o 0x200 -f <filename>
 
 ```
 

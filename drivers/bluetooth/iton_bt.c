@@ -133,7 +133,7 @@ static inline void iton_bt_rx_bluetooth_notif(uint8_t data) {
 }
 
 static void iton_bt_rx_cb(void *arg) {
-    if (readPin(ITON_BT_INT_LINE)) {
+    if (gpio_read_pin(ITON_BT_INT_LINE)) {
         chSysLockFromISR();
         spiStartReceiveI(&ITON_BT_SPI_PORT, ITON_BT_BUFFER_LEN, &iton_bt_buffer[0]);
         chSysUnlockFromISR();
@@ -144,7 +144,7 @@ static void iton_bt_rx_cb(void *arg) {
 
 #    ifdef ITON_BT_ENABLE_ACK
         // hack to make sure irq is low since acks messes with stuff
-        writePinLow(ITON_BT_IRQ_LINE);
+        gpio_write_pin_low(ITON_BT_IRQ_LINE);
 #    endif
 
         switch (iton_bt_buffer[0]) {
@@ -169,17 +169,17 @@ static void iton_bt_rx_cb(void *arg) {
 #endif
 
 void iton_bt_data_cb(SPIDriver *spip) {
-    writePinLow(ITON_BT_IRQ_LINE);
+    gpio_write_pin_low(ITON_BT_IRQ_LINE);
 }
 
 /**
  * Driver Functions
  */
 void iton_bt_init(void) {
-    setPinOutput(ITON_BT_IRQ_LINE);
-    setPinInput(ITON_BT_INT_LINE);
+    gpio_set_pin_output(ITON_BT_IRQ_LINE);
+    gpio_set_pin_input(ITON_BT_INT_LINE);
 
-    writePinLow(ITON_BT_IRQ_LINE);
+    gpio_write_pin_low(ITON_BT_IRQ_LINE);
 
 #if defined(PAL_USE_CALLBACKS) || defined(PAL_USE_WAIT)
     palSetLineCallback(ITON_BT_INT_LINE, iton_bt_rx_cb, NULL);
@@ -190,20 +190,20 @@ void iton_bt_init(void) {
 }
 
 void iton_bt_send(uint8_t cmd, uint8_t *data, uint8_t len) {
-    while (readPin(ITON_BT_IRQ_LINE))
+    while (gpio_read_pin(ITON_BT_IRQ_LINE))
         ;
 
-    writePinHigh(ITON_BT_IRQ_LINE);
+    gpio_write_pin_high(ITON_BT_IRQ_LINE);
     iton_bt_buffer[0] = cmd;
     memcpy(&iton_bt_buffer[1], data, len);
     spiStartSend(&ITON_BT_SPI_PORT, len + 1, &iton_bt_buffer[0]);
 }
 
 void iton_bt_send2(uint8_t cmd, uint8_t b1, uint8_t b2) {
-    while (readPin(ITON_BT_IRQ_LINE))
+    while (gpio_read_pin(ITON_BT_IRQ_LINE))
         ;
 
-    writePinHigh(ITON_BT_IRQ_LINE);
+    gpio_write_pin_high(ITON_BT_IRQ_LINE);
     iton_bt_buffer[0] = cmd;
     iton_bt_buffer[1] = b1;
     iton_bt_buffer[2] = b2;
@@ -212,7 +212,7 @@ void iton_bt_send2(uint8_t cmd, uint8_t b1, uint8_t b2) {
 }
 
 inline void iton_bt_send_ack(uint8_t b1, uint8_t b2) {
-    writePinHigh(ITON_BT_IRQ_LINE);
+    gpio_write_pin_high(ITON_BT_IRQ_LINE);
     iton_bt_buffer[0] = control;
     iton_bt_buffer[1] = b1;
     iton_bt_buffer[2] = b2;

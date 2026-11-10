@@ -17,7 +17,7 @@
 #    elif defined(QMK_MCU_FAMILY_WB32)
 #        define BACKING_STORE_WRITE_SIZE 8 // from hal_efl_lld.c
 #    elif defined(QMK_MCU_FAMILY_AT32)
-#        define BACKING_STORE_WRITE_SIZE 2 // from hal_efl_lld.c
+#        define BACKING_STORE_WRITE_SIZE 4 // from hal_efl_lld.c
 #    elif defined(QMK_MCU_FAMILY_SN32)
 #        if defined(SN32_FLASH_LINE_SIZE) // from some family's sn32_registry.h file
 #            define BACKING_STORE_WRITE_SIZE (SN32_FLASH_LINE_SIZE)
